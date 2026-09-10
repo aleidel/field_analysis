@@ -16,7 +16,11 @@ inputs:
   id: soil
   type: File
 
-outputs: []
+outputs:
+- id: zone_map_png
+  outputSource: plot_zone_map/zone_map_png
+  type: File
+
 requirements:
 - class: SubworkflowFeatureRequirement
 
@@ -35,3 +39,8 @@ steps:
   out:
   - fertility_csv
   run: ../compute_fertility/compute_fertility.cwl
+- id: plot_zone_map
+  in: []
+  out:
+  - zone_map_png
+  run: ../plot_zone_map/plot_zone_map.cwl
