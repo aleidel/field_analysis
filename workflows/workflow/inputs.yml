@@ -1,0 +1,7 @@
+soil:
+  class: File
+  location: ../../data/soil.csv
+reflectance:
+  class: File
+  location: ../../data/reflectance.csv
+
