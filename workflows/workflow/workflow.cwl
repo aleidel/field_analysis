@@ -10,6 +10,11 @@ inputs:
     location: ../../data/reflectance.csv
   id: reflectance
   type: File
+- default:
+    class: File
+    location: ../../data/soil.csv
+  id: soil
+  type: File
 
 outputs: []
 requirements:
@@ -23,3 +28,10 @@ steps:
   out:
   - ndvi_csv
   run: ../compute_ndvi/compute_ndvi.cwl
+- id: compute_fertility
+  in:
+  - id: soil
+    source: soil
+  out:
+  - fertility_csv
+  run: ../compute_fertility/compute_fertility.cwl
