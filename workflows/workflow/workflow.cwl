@@ -40,7 +40,11 @@ steps:
   - fertility_csv
   run: ../compute_fertility/compute_fertility.cwl
 - id: plot_zone_map
-  in: []
+  in:
+  - id: ndvi
+    source: compute_ndvi/reflectance
+  - id: soil
+    source: compute_fertility/soil
   out:
   - zone_map_png
   run: ../plot_zone_map/plot_zone_map.cwl
