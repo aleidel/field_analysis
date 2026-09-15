@@ -1,13 +1,13 @@
 #!/usr/bin/env Rscript
 # =============================================================================
-# compute_fertility_index.R
+# compute_fertility.R
 #
 # Computes a normalized soil fertility index (0-1) for each grid cell based on
 # nitrate concentration and organic matter content. 
 # This workflow can be run using the r-base:4.4.1 container image.
 #
 # Usage:
-#   Rscript compute_fertility_index.R --soil <input.csv> --output <output.csv>
+#   Rscript compute_fertility.R --soil <input.csv> --output <output.csv>
 #
 # Input CSV must contain columns: col, row, nitrate_ppm, organic_matter_pct
 # =============================================================================
