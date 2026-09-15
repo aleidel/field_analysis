@@ -5,6 +5,7 @@ plot_management_zones.py
 Combines NDVI (vegetation vigor) and soil fertility index data to classify
 each grid cell into one of four management zones, then produces a 3-panel
 figure (NDVI map, fertility map, management zone map) with a legend panel.
+The workflow uses the same Dockerfile as the compute_ndvi.py step. 
 
 Management zones are defined by whether NDVI and fertility are above/below
 their respective medians:
@@ -14,7 +15,7 @@ their respective medians:
     3: Low vigor / Low fertility   (priority zone)
 
 Usage:
-    python plot_management_zones.py --ndvi <ndvi.csv> --fertility <fertility.csv> --output <plot.png>
+    python3 plot_zone_map.py --ndvi <ndvi.csv> --fertility <fertility.csv> --output <plot.png>
 
 Input CSVs must both contain a "col" and "row" column so they can be merged,
 plus:
